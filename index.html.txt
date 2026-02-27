@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Islamic Helper</title>
+<style>
+body{
+font-family:sans-serif;
+text-align:center;
+background:#f0f8ff;
+}
+button{
+padding:10px 20px;
+margin:5px;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🕌 Islamic Helper</h1>
+
+<h2>Tasbeeh Counter</h2>
+<h1 id="count">0</h1>
+
+<button onclick="inc()">Count</button>
+<button onclick="reset()">Reset</button>
+
+<hr>
+
+<h2>Daily Quote</h2>
+<p id="quote">Patience is beautiful.</p>
+
+<button onclick="newQuote()">New Quote</button>
+
+<script>
+let c=0;
+function inc(){
+c++;
+document.getElementById("count").innerText=c;
+}
+
+function reset(){
+c=0;
+document.getElementById("count").innerText=c;
+}
+
+let quotes=[
+"Allah is with the patient.",
+"Indeed with hardship comes ease.",
+"Remember Allah and He will remember you.",
+"Trust Allah always."
+];
+
+function newQuote(){
+let r=Math.floor(Math.random()*quotes.length);
+document.getElementById("quote").innerText=quotes[r];
+}
+</script>
+
+</body>
+</html>
